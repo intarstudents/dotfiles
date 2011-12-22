@@ -31,4 +31,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PS1='\[\033[01;37m\]\h\[\033[01;34m\] \W #\[\033[00m\] '
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+
+PS1='\[\033[01;37m\]\h\[\033[01;34m\]$(__git_ps1 " (%s)") \W #\[\033[00m\] '
