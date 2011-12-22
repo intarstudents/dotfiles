@@ -9,6 +9,7 @@
 	ci = commit
 	br = branch
 	staged = diff --cached
+	nst = log --oneline --date-order --graph --all --decorate
 [color]
 	ui = auto
 [advice]
