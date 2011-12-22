@@ -31,10 +31,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-
-COLOR_DEFAULT= 
 COLOR_WHITE='\033[01;37m'
 COLOR_LIGHTGRAY='\033[00;37m'
 COLOR_GRAY='\033[1;30m'
@@ -52,13 +48,20 @@ COLOR_PINK='\033[1;35m'
 COLOR_CYAN='\033[0;36m'
 COLOR_LIGHTCYAN='\033[1;36m'
 COLOR_DEFAULT='\033[0m'
-COLOR_DEFAULT=$COLOR_WHITE
+COLOR_SET=$COLOR_WHITE
 
 CURRENT_HOST=$(uname -n)
 
 case $CURRENT_HOST in
-"fruitea") COLOR_DEFAULT=$COLOR_PURPLE ;;
-"mintea") COLOR_DEFAULT=$COLOR_LIGHTGREEN ;;
+	"fruitea") 	COLOR_SET=$COLOR_WHITE 		;;
+	"mintea") 	COLOR_SET=$COLOR_LIGHTGREEN ;;
 esac
 
-PS1="\[$COLOR_DEFAULT\]\h\[\033[01;34m\]$(__git_ps1 " (%s)") \W #\[\033[00m\] "
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+
+function ___git_ps1 {
+	__git_ps1 ' (%s)'
+}
+
+PS1="\[$COLOR_SET\]\h\[$COLOR_LIGHTGRAY\]\`___git_ps1\`\[$COLOR_DEFAULT\] \[$COLOR_LIGHTBLUE\]\W #\[$COLOR_DEFAULT\] "
