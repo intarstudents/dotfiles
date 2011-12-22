@@ -5,3 +5,12 @@
 [alias]
 	co = checkout
 	pending = !git --no-pager log origin/master..master && echo
+[color]
+	ui = auto
+[advice]
+	pushNonFastForward = false
+	statusHints = false
+[diff]
+	mnemonicprefix = true
+[branch]
+	autosetupmerge = true
