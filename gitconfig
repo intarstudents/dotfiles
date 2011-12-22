@@ -5,6 +5,10 @@
 [alias]
 	co = checkout
 	pending = !git --no-pager log origin/master..master && echo
+	st = status
+	ci = commit
+	br = branch
+	staged = diff --cached
 [color]
 	ui = auto
 [advice]
