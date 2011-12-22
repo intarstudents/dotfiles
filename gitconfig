@@ -4,3 +4,4 @@
 
 [alias]
 	co = checkout
+	pending = !git --no-pager log origin/master..master && echo
