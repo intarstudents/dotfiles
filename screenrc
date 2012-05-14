@@ -1,0 +1,6 @@
+hardstatus on
+hardstatus alwayslastline
+startup_message off
+termcapinfo xterm ti@:te@
+hardstatus string "%{= kG}%-w%{.rW} %n %t %{-}%+w %=%{..B} %H %{..W}%d.%m.%Y %c "
+escape ^za
