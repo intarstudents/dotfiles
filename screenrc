@@ -1,0 +1,17 @@
+# This is here for OS X
+shell -$SHELL
+
+# Turn UTF-8 on by default
+defutf8 on
+
+# Don't show any startup messages
+startup_message off
+
+# Create nice status bar
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{= kG}%-w%{.rW} %n %t %{-}%+w %=%{..B} %H %{..W}%d.%m.%Y %c "
+termcapinfo xterm ti@:te@
+
+# Change escape to CTRL + Z
+escape ^za
