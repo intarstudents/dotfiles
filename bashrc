@@ -48,20 +48,18 @@ COLOR_PINK='\033[1;35m'
 COLOR_CYAN='\033[0;36m'
 COLOR_LIGHTCYAN='\033[1;36m'
 COLOR_DEFAULT='\033[0m'
-COLOR_SET=$COLOR_WHITE
 
-CURRENT_HOST=$(uname -n)
-
-case $CURRENT_HOST in
-	"fruitea") 	COLOR_SET=$COLOR_WHITE 		;;
-	"mintea") 	COLOR_SET=$COLOR_LIGHTGREEN ;;
-esac
+if ((UID == 0)); then
+	COLOR_SET=$COLOR_LIGHTRED
+else
+	COLOR_SET=$COLOR_WHITE
+fi
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
 function ___git_ps1 {
-	__git_ps1 ' (%s)'
+  __git_ps1 ' (%s)'
 }
 
 PS1="\[$COLOR_SET\]\h\[$COLOR_LIGHTGRAY\]\`___git_ps1\`\[$COLOR_DEFAULT\] \[$COLOR_LIGHTBLUE\]\W #\[$COLOR_DEFAULT\] "
