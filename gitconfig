@@ -4,6 +4,7 @@
 
 [alias]
 	co = checkout
+	up = pull --rebase
 	pending = !git --no-pager log origin/master..master && echo
 	st = status
 	ci = commit
