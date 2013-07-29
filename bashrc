@@ -7,30 +7,26 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s histappend
 
-# check the window size after each command
-shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
+# bash completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
+# fixes xterm color palette
+if [ "$TERM" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
+
+# promt coloring options
 COLOR_WHITE='\033[01;37m'
 COLOR_LIGHTGRAY='\033[00;37m'
 COLOR_GRAY='\033[1;30m'
@@ -50,11 +46,12 @@ COLOR_LIGHTCYAN='\033[1;36m'
 COLOR_DEFAULT='\033[0m'
 
 if ((UID == 0)); then
-	COLOR_SET=$COLOR_LIGHTRED
+  COLOR_SET=$COLOR_LIGHTRED
 else
-	COLOR_SET=$COLOR_WHITE
+  COLOR_SET=$COLOR_WHITE
 fi
 
+# show current git branch in promt
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
@@ -62,4 +59,8 @@ function ___git_ps1 {
   __git_ps1 ' (%s)'
 }
 
+# promt itself
 PS1="\[$COLOR_SET\]\h\[$COLOR_LIGHTGRAY\]\`___git_ps1\`\[$COLOR_DEFAULT\] \[$COLOR_LIGHTBLUE\]\W #\[$COLOR_DEFAULT\] "
+
+# add golang PATH
+export PATH=$PATH:$HOME/Repos/go/bin
