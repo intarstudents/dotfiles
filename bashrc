@@ -5,16 +5,12 @@
 HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
 HISTFILESIZE=2000
-shopt -s histappend
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
+# case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# append to the Bash history file, rather than overwriting it
+shopt -s histappend
 
 # bash completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -64,3 +60,5 @@ PS1="\[$COLOR_SET\]\h\[$COLOR_LIGHTGRAY\]\`___git_ps1\`\[$COLOR_DEFAULT\] \[$COL
 
 # add golang PATH
 export PATH=$PATH:$HOME/Repos/go/bin
+
+source ~/.aliases
