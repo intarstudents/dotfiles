@@ -1,7 +1,9 @@
 {
 	"always_show_minimap_viewport": true,
+	"auto_indent": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"draw_indent_guides": false,
 	"draw_minimap_border": true,
 	"fallback_encoding": "UTF-8",
 	"fold_buttons": false,
@@ -21,12 +23,14 @@
 	"match_brackets_content": false,
 	"match_brackets_square": false,
 	"remember_open_files": false,
-	"tab_size": 2,
-	"tree_animation_enabled": false,
-	"update_check": false,
-	"word_wrap": false,
-	"draw_indent_guides": false,
 	"shift_tab_unindent": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
 	"tab_completion": true,
-	"auto_indent": true
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"tree_animation_enabled": false,
+	"update_check": true,
+	"word_wrap": false,
+	"enable_tab_scrolling": false
 }
