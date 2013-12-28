@@ -24,8 +24,6 @@
 	"match_brackets_square": false,
 	"remember_open_files": false,
 	"shift_tab_unindent": true,
-	"soda_classic_tabs": true,
-	"soda_folder_icons": true,
 	"tab_completion": true,
 	"tab_size": 2,
 	"theme": "Spacegray.sublime-theme",
