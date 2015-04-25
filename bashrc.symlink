@@ -58,7 +58,4 @@ function ___git_ps1 {
 # promt itself
 PS1="\[$COLOR_SET\]\h\[$COLOR_LIGHTGRAY\]\`___git_ps1\`\[$COLOR_DEFAULT\] \[$COLOR_LIGHTBLUE\]\W #\[$COLOR_DEFAULT\] "
 
-# add golang PATH
-export PATH=$PATH:$HOME/Repos/go/bin
-
 source ~/.aliases
