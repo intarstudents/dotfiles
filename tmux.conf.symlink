@@ -75,7 +75,7 @@ set -g pane-active-border-bg default
 
 # configure contents of status bar
 set -g status-utf8 on
-set -g status-right "#[fg=colour12] #h #[fg=white]%d.%m.%Y %H:%M "
+set -g status-right "#[fg=colour12] #h #[fg=white]%Y.%m.%d %H:%M #[fg=colour3]#(~/.bin/weather) "
 
 # don't rename window automaticly
 setw -g automatic-rename off
