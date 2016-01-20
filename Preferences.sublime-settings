@@ -30,5 +30,6 @@
 	"tree_animation_enabled": false,
 	"update_check": true,
 	"word_wrap": false,
-	"enable_tab_scrolling": false
+	"enable_tab_scrolling": false,
+	"show_encoding": true"
 }
