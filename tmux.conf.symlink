@@ -45,12 +45,6 @@ bind -r J resize-pane -D 5
 bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 
-# disable mouse support (at least while we're learning)
-setw -g mode-mouse off
-set -g mouse-select-pane off
-set -g mouse-resize-pane off
-set -g mouse-select-window off
-
 # turn on 256 color support in tmux
 set -g default-terminal "screen-256color"
 #set -g default-terminal "xterm-256color"
@@ -74,7 +68,6 @@ set -g pane-active-border-fg colour15
 set -g pane-active-border-bg default
 
 # configure contents of status bar
-set -g status-utf8 on
 set -g status-right "#[fg=colour12] #h #[fg=white]%Y.%m.%d %H:%M #[fg=colour3]#(~/.bin/weather) "
 
 # don't rename window automaticly
