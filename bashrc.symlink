@@ -6,6 +6,9 @@ HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# less
+LESSCHARSET=UTF-8
+
 # case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
