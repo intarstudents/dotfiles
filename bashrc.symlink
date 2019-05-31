@@ -3,14 +3,21 @@
 
 # command history
 HISTCONTROL=ignoredups:ignorespace
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=1000000
+HISTFILESIZE=1000000
+HISTTIMEFORMAT='%F %T '
 
 # case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
 # append to the Bash history file, rather than overwriting it
 shopt -s histappend
+
+# use one command per line
+shopt -s cmdhist
+
+# store history immediately
+PROMPT_COMMAND='history -a'
 
 # bash completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
