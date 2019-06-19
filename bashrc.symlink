@@ -8,7 +8,7 @@ HISTFILESIZE=1000000
 HISTTIMEFORMAT='%F %T '
 
 # less
-LESSCHARSET=UTF-8
+export LESSCHARSET=UTF-8
 
 # case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
