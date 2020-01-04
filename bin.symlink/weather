@@ -1,8 +1,15 @@
 #!/bin/bash
-TEMP=`curl -s "http://weather.yahooapis.com/forecastrss?w=854823&u=c" | gawk 'match($0, /temp="([0-9\-]+)"/, arr) { print arr[1] }'`
-if [ -z "$TEMP" ];
-then
-	echo "?"
+
+[ -f ~/.wurl ] && wurl=$(< ~/.wurl )
+
+if [ -z "$wurl" ]; then
+	echo "{no-wurl}";
+	exit 1;
+fi
+
+wvalue=$(wget -qO- $wurl)
+if [ -z "$wvalue" ]; then
+	echo "?";
 else
-	echo $TEMP
+	echo $wvalue;
 fi
