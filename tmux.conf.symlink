@@ -54,18 +54,14 @@ set -g status-fg white
 set -g status-bg colour234
 
 # fiddle with colors of inactive windows
-setw -g window-status-fg colour70
-setw -g window-status-bg default
+setw -g window-status-style bg=default,fg=colour70,none
 
 # change color of active window
-setw -g window-status-current-fg white
-setw -g window-status-current-bg colour124
+setw -g window-status-current-style bg=colour124,fg=white,bold
 
 # set color of regular and active panes
-set -g pane-border-fg colour240
-set -g pane-border-bg default
-set -g pane-active-border-fg colour15
-set -g pane-active-border-bg default
+set -g pane-border-style "fg=colour240"
+set -g pane-active-border-style "fg=colour15"
 
 # configure contents of status bar
 set -g status-right "#[fg=colour12] #h #[fg=white]%Y.%m.%d %H:%M #[fg=colour3]#(~/.bin/weather) "
