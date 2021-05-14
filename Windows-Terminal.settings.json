@@ -1,0 +1,41 @@
+{
+	"$schema": "https://aka.ms/terminal-profiles-schema",
+	"defaultProfile": "{6e9fa4d2-a4aa-562d-b1fa-0789dc1f83d7}",
+	"disabledProfileSources": ["Windows.Terminal.Azure"],
+	"theme": "dark",
+	"copyOnSelect": false,
+	"copyFormatting": false,
+	"profiles":
+	{
+		"defaults":
+		{
+			"fontSize": 10,
+			"suppressApplicationTitle": true,
+			"cursorShape": "filledBox",
+			"historySize": 1000000
+		},
+		"list":
+		[
+			{
+				"guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+				"name": "Windows PowerShell",
+				"commandline": "powershell.exe",
+				"hidden": false
+			},
+			{
+				"guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+				"name": "Command Prompt",
+				"commandline": "cmd.exe",
+				"hidden": false
+			},
+			{
+				"guid": "{6e9fa4d2-a4aa-562d-b1fa-0789dc1f83d7}",
+				"hidden": false,
+				"name": "Legacy",
+				"source": "Windows.Terminal.Wsl"
+			}
+		]
+	},
+	"schemes": [],
+	"keybindings": []
+}
