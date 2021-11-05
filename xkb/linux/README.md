@@ -14,5 +14,7 @@ wget https://github.com/autokey/autokey/releases/download/v0.95.10/autokey-gtk_0
 sudo dpkg -i autokey-common_0.95.10-0_all.deb
 sudo aptitude install -f
 sudo dpkg -i autokey-gtk_0.95.10-0_all.deb
+# Launch AutoKey for first time to generate conf directory and exit
+# Then launch this command to replace configuration
 ./autokey-conf.sh
 ```
