@@ -23,6 +23,8 @@ $ sudo udevadm control --reload-rules && sudo udevadm trigger
 $ ./install-supervisorconf.sh
 $ sudo supervisorctl reread
 $ sudo supervisorctl update
+$ # Hotplug keyboard or fix manualy now broken xmodmap
+$ ./xmodmap.sh
 ```
 
 # [autokey](https://github.com/autokey/autokey)
