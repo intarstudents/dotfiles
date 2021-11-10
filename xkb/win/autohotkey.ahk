@@ -78,28 +78,54 @@ else
     Send {Right}
 return
 
+; ctrl + alt + shift + 1
 CapsLock & q::
     Send ^+!1
 return
 
+; ctrl + alt + shift + 2
 CapsLock & w::
     Send ^+!2
 return
 
+; ctrl + alt + shift + 3
 CapsLock & e::
     Send ^+!3
 return
 
+; ctrl + alt + shift + 4
 CapsLock & a::
     Send ^+!4
 return
 
+; ctrl + alt + shift + 5
 CapsLock & s::
     Send ^+!5
 return
 
+; ctrl + alt + shift + 6
 CapsLock & d::
     Send ^+!6
+return
+
+; end
+CapsLock & ]::
+    Send {End}
+return
+
+; home
+CapsLock & [::
+    Send {Home}
+return
+
+; pgup
+CapsLock & -::
+    Send {PgUp}
+return
+
+; pgdown
+CapsLock & =::
+    Send {PgDn}
 return
 
 return
