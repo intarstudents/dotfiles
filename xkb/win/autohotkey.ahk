@@ -110,21 +110,33 @@ return
 
 ; end
 CapsLock & ]::
+if GetKeyState("Shift", "D")
+    Send +{End}
+else
     Send {End}
 return
 
 ; home
 CapsLock & [::
+if GetKeyState("Shift", "D")
+     Send +{Home}
+else
     Send {Home}
 return
 
 ; pgup
 CapsLock & -::
+if GetKeyState("Shift", "D")
+    Send +{PgUp}
+else
     Send {PgUp}
 return
 
 ; pgdown
 CapsLock & =::
+if GetKeyState("Shift", "D")
+    Send +{PgDn}
+else
     Send {PgDn}
 return
 
