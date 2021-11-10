@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [
-            "<ctrl>", 
+            "<ctrl>",
             "<hyper>"
         ],
         "hotKey": "k"
