@@ -4,6 +4,10 @@
 # https://unix.stackexchange.com/questions/103814/capslock-as-modifier-key-for-application-keymaps/151046#151046
 # Add this script to startup or run manualy
 ./xmodmap.sh
+# Reset xmodmap
+# https://www.systutorials.com/how-to-reset-the-keyboard-set-by-xmodmap-on-linux/
+# setxkbmap
+# setxkbmap -option
 ```
 
 ## Hotpluging
