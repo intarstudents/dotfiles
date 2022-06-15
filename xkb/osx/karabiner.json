@@ -145,7 +145,7 @@
                         ]
                     },
                     {
-                        "description": "Hyper + {Q, W, E, A, S, D} = Control + Command + Shift + {1, 2, 3, 4, 5, 6}",
+                        "description": "Hyper + {Q, W, E, A, S} = Control + Command + Shift + {1, 2, 3, 4, 5}",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -251,27 +251,6 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_mod",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "6",
-                                        "modifiers": [
-                                            "control", "command", "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -371,6 +350,32 @@
                                 "to": [
                                     {
                                         "key_code": "page_down"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper + d = {single quote}",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_mod",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "quote"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
                                     }
                                 ],
                                 "type": "basic"
