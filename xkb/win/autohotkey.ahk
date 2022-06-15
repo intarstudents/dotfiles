@@ -103,11 +103,6 @@ CapsLock & s::
     Send ^+!5
 return
 
-; ctrl + alt + shift + 6
-CapsLock & d::
-    Send ^+!6
-return
-
 ; end
 CapsLock & ]::
 if GetKeyState("Shift", "D")
@@ -140,4 +135,7 @@ else
     Send {PgDn}
 return
 
+; single apostrophe (lv layout)
+CapsLock & d::
+Send ''{Backspace}
 return
