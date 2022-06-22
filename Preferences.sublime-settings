@@ -31,5 +31,6 @@
 	"update_check": true,
 	"word_wrap": false,
 	"enable_tab_scrolling": false,
-	"show_encoding": true
+	"show_encoding": true,
+	"rulers": [80, 100, 120]
 }
