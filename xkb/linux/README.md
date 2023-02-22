@@ -22,6 +22,8 @@ Bus 001 Device 071: ID 0951:16d2 Kingston Technology
 $ # Create udev rule to create trigger file in /tmp
 $ echo 'ACTION=="add", ATTRS{idVendor}=="0951", ATTRS{idProduct}=="16d2", RUN+="/usr/bin/touch /tmp/xkb-udev"' | \
 	sudo tee /etc/udev/rules.d/00-usb-keyboards.rules
+$ echo 'ACTION=="add", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="098f", RUN+="/usr/bin/touch /tmp/xkb-udev"' | \
+	sudo tee -a /etc/udev/rules.d/00-usb-keyboards.rules
 $ # Reload udev rules and trigger them
 $ sudo udevadm control --reload-rules && sudo udevadm trigger
 $ ./install-supervisorconf.sh
