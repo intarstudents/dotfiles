@@ -1,5 +1,7 @@
 ; #NoTrayIcon
 
+; https://www.autohotkey.com/boards/viewtopic.php?t=31259 - Play/Pause in Spotify
+
 SetCapsLockState, AlwaysOff
 
 CapsLock & k::
@@ -81,11 +83,13 @@ return
 ; ctrl + alt + shift + 1
 CapsLock & q::
     Send ^+!1
+    PostMessage, 0x319,, 0xE0000,, ahk_exe Spotify.exe ; play/pause
 return
 
 ; ctrl + alt + shift + 2
 CapsLock & w::
     Send ^+!2
+    PostMessage, 0x319,, 0xB0000,, ahk_exe Spotify.exe ; next track
 return
 
 ; ctrl + alt + shift + 3
@@ -96,6 +100,7 @@ return
 ; ctrl + alt + shift + 4
 CapsLock & a::
     Send ^+!4
+    PostMessage, 0x319,, 0xC0000,, ahk_exe Spotify.exe ; prev track
 return
 
 ; ctrl + alt + shift + 5
