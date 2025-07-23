@@ -28,7 +28,7 @@
 	"tab_size": 2,
 	"theme": "Spacegray.sublime-theme",
 	"tree_animation_enabled": false,
-	"update_check": true,
+	"update_check": false,
 	"word_wrap": false,
 	"enable_tab_scrolling": false,
 	"show_encoding": true,
